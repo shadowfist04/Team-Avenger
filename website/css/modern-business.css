@@ -82,4 +82,13 @@ hr {
     font-size: 20px;
     margin: 5% auto 10% auto;
 }
+/* requirment */
+.main {
+    font-size: 42px;
+    font-family: 'Heebo', sans-serif;
+    color: black;
+    font-weight: bold;
+   margin: 4% 7% 1% 7%;
+}
+   
        
