@@ -18,12 +18,12 @@ if(isset($_POST['submit'])){
     $mail->isSMTP();
     $mail->Host = 'smtp.gmail.com';
     $mail->SMTPAuth = true;
-    $mail->Username = 'samthoshpatkar159@gmail.com'; // Gmail address which you want to use as SMTP server
-    $mail->Password = 'Patkar@1234'; // Gmail address Password
+    $mail->Username = 'santhoshpatkar@gmail.com'; // Gmail address
+    $mail->Password = '/mailpassword/'; // Gmail address Password
     $mail->SMTPSecure = "tls";//PHPMailer::ENCRYPTION_STARTTLS;
     $mail->Port = '587';
-    $mail->setFrom('samthoshpatkar159@gmail.com'); //
-    $mail->addAddress('samthoshpatkar159@gmail.com'); 
+    $mail->setFrom('santhoshpatkar@gmail.com'); //
+    $mail->addAddress('santhoshpatkar@gmail.com'); 
 
     $mail->isHTML(true);
     $mail->Subject = 'Message Received (Contact Page)';
