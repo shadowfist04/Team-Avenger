@@ -156,6 +156,24 @@ foreach($results as $result)
 
 <div class="row">
 <div class="col-lg-4 mb-4">
+<div class="fw-normal">Select Near Blood Bank<span style="color:red">*</span> </div>
+<div><select name="bloodbank" class="form-control" required>
+<?php $sql = "SELECT * from  tblblooddonars ";
+$query = $dbh -> prepare($sql);
+$query->execute();
+$results=$query->fetchAll(PDO::FETCH_OBJ);
+$cnt=1;
+if($query->rowCount() > 0)
+{
+foreach($results as $result)
+{               ?>  
+<option value="<?php echo htmlentities($result->bloodbank);?>"><?php echo htmlentities($result->bloodbank);?></option>
+<?php }} ?>
+</select>
+</div>
+</div>
+	
+<div class="col-lg-4 mb-4">
 <div class="fw-normal">Distict</div>
   <select class="form-control" name="district">
 		<option selected="selected" value="0">Select District</option>
