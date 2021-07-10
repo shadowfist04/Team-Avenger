@@ -53,7 +53,7 @@ include('includes/config.php');
         
 
         <!-- Portfolio Section -->
-        <h2 class="title">Some of the Donar</h2>
+        <h2 class="title">Some of the Blood Bank</h2>
 
         <div class="row">
                    <?php 
@@ -73,9 +73,7 @@ foreach($results as $result)
                 <div class="card h-100">
                     <a href="#"><img class="card-img-top img-fluid" src="images/blood-donor.jpg" alt="" ></a>
                     <div class="card-block con-head">
-                        <h4 class="card-title"><a href="#"><?php echo htmlentities($result->FullName);?></a></h4>
-<p class="card-text"><b>  Gender :</b> <?php echo htmlentities($result->Gender);?></p>
-<p class="card-text"><b>Blood Group :</b> <?php echo htmlentities($result->BloodGroup);?></p>
+                        <h4 class="card-title"><a href="search-donor.php"><?php echo htmlentities($result->bloodbank);?></a></h4>
 <p class="card-text"><b>District :</b> <?php echo htmlentities($result->district);?></p>
 
                     </div>
@@ -109,7 +107,7 @@ foreach($results as $result)
         <hr>
 
         <!-- Call to Action Section -->
-            <div class="col-md-4" style="margin-bottom: 2%; text-align:center; margin-left:350px; ">
+            <div class="col-md-4" style="text-align:center; margin:0 auto 2% auto; ">
                 <a class="btn btn-lg btn-secondary btn-block" href="become-donar.php" style="text-align:center;">Become a Donar</a>
             </div>
         
