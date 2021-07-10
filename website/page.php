@@ -46,25 +46,13 @@ include('includes/config.php');
 <?php include('includes/header.php');?>
     <!-- Page Content -->
     <div class="container">
-                    <?php 
-$pagetype=$_GET['type'];
-$sql = "SELECT type,detail,PageName from tblpages where type=:pagetype";
-$query = $dbh -> prepare($sql);
-$query->bindParam(':pagetype',$pagetype,PDO::PARAM_STR);
-$query->execute();
-$results=$query->fetchAll(PDO::FETCH_OBJ);
-$cnt=1;
-if($query->rowCount() > 0)
-{
-foreach($results as $result)
-{ ?>
-        <h1 class="mt-4 mb-3"><?php   echo htmlentities($result->PageName); ?> </h1>
+       <h1 class="mt-4 mb-3">About</h1>
 
         <ol class="breadcrumb">
             <li class="breadcrumb-item">
                 <a href="index.php">Home</a>
             </li>
-            <li class="breadcrumb-item active"><?php   echo htmlentities($result->PageName); ?></li>
+             <li class="breadcrumb-item active">About us</li>
         </ol>
      <div class="container">
   <div class="row">
@@ -80,8 +68,6 @@ foreach($results as $result)
         
 
     </div>
-    <!-- /.container -->
-    <?php } } ?>
 
     <!-- Footer -->
    <?php include('includes/footer.php');?>
