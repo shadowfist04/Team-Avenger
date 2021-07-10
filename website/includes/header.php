@@ -12,8 +12,10 @@
                     <li class="nav-item">
                         <a class="nav-link" href="become-donar.php">Become a Donar</a>
                     </li>
-                 
-                     <li class="nav-item">
+                      <li class="nav-item">
+                        <a class="nav-link" href="requirment.php">Eligibility Details</a>
+                    </li>
+                    <li class="nav-item">
                         <a class="nav-link" href="search-donor.php">Search Blood</a>
                     </li>
                       <li class="nav-item">
