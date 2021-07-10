@@ -17,7 +17,7 @@
                         <a class="nav-link" href="search-donor.php">Search Blood</a>
                     </li>
                       <li class="nav-item">
-                        <a class="nav-link" href="contact.php">Contact us</a>
+                        <a class="nav-link" href="contact-in.php">Contact us</a>
                     </li>
                  
                  
