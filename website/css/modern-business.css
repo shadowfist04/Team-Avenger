@@ -62,9 +62,6 @@ hr {
     align-items: center;
 }
 .banner-text {
-    height: 300px;
-    width: 40%;
-    background-color:rgba(95, 131, 165, 0.7);
      display: flex;
     font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
     font-size: 25px;
