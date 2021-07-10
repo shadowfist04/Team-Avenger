@@ -93,6 +93,23 @@ foreach($results as $result)
 </div>
 </div>
 
+   <div class="col-lg-4 mb-4">
+<div class="fw-normal">Blood Bank<span style="color:red">*</span> </div>
+<div><select name="bloodbank" class="form-control" required>
+<?php $sql = "SELECT * from  tblblooddonars ";
+$query = $dbh -> prepare($sql);
+$query->execute();
+$results=$query->fetchAll(PDO::FETCH_OBJ);
+$cnt=1;
+if($query->rowCount() > 0)
+{
+foreach($results as $result)
+{               ?>  
+<option value="<?php echo htmlentities($result->bloodbank);?>"><?php echo htmlentities($result->bloodbank);?></option>
+<?php }} ?>
+</select>
+</div>
+</div>
 
 <div class="col-lg-4 mb-4">
 <div class="fw-normal">District <span style="color:red">*</span></div>
@@ -150,11 +167,13 @@ if(isset($_POST['submit']))
 {
 $status=1;
 $bloodgroup=$_POST['bloodgroup'];
+$bloodbank=$_POST['bloodbank'];
 $district=$_POST['district'];
-$sql = "SELECT * from tblblooddonars where (status=:status and BloodGroup=:bloodgroup) and (district=:district)";
+$sql = "SELECT * from tblblooddonars where (status=:status and BloodGroup=:bloodgroup) and (bloodbank=:bloodbank) and (district=:district)";
 $query = $dbh -> prepare($sql);
 $query->bindParam(':status',$status,PDO::PARAM_STR);
 $query->bindParam(':bloodgroup',$bloodgroup,PDO::PARAM_STR);
+$query->bindParam(':bloodbank',$bloodbank,PDO::PARAM_STR);
 $query->bindParam(':district',$district,PDO::PARAM_STR);
 $query->execute();
 $results=$query->fetchAll(PDO::FETCH_OBJ);
@@ -181,6 +200,7 @@ echo htmlentities($result->EmailId);
 <p class="card-text"><b>  Gender :</b> <?php echo htmlentities($result->Gender);?></p>
 <p class="card-text"><b> Age:</b> <?php echo htmlentities($result->Age);?></p>
 <p class="card-text"><b>Blood Group :</b> <?php echo htmlentities($result->BloodGroup);?></p>
+<p class="card-text"><b>Blood Bank :</b> <?php echo htmlentities($result->bloodbank);?></p>
 <p class="card-text"><b>District :</b>                  
 <?php if($result->district=="")
 {
