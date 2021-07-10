@@ -19,7 +19,7 @@ if(isset($_POST['submit'])){
     $mail->Host = 'smtp.gmail.com';
     $mail->SMTPAuth = true;
     $mail->Username = 'santhoshpatkar@gmail.com'; // Gmail address
-    $mail->Password = '/mailpassword/'; // Gmail address Password
+    $mail->Password = '//mailpassword//'; // Gmail address Password
     $mail->SMTPSecure = "tls";//PHPMailer::ENCRYPTION_STARTTLS;
     $mail->Port = '587';
     $mail->setFrom('santhoshpatkar@gmail.com'); //
